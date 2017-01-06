@@ -1,0 +1,23 @@
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+<script type="text/javascript">
+    var captchaWidgetForPEPC;
+    var captchaWidgetForEbro;
+    var captchaWidgetForDCGA;
+    var onloadCallback = function () {
+        if (document.getElementById('pepcReCaptcha')) {
+            captchaWidgetForPEPC = grecaptcha.render('pepcReCaptcha', {
+                'sitekey': ''
+            });
+        }
+        if (document.getElementById('ebroReCaptcha')) {
+            captchaWidgetForEbro = grecaptcha.render('ebroReCaptcha', {
+                'sitekey': ''
+            });
+        }
+        if (document.getElementById('dcgaReCaptcha')) {
+            captchaWidgetForDCGA = grecaptcha.render('dcgaReCaptcha', {
+                'sitekey': ''
+            });
+        }
+    };
+</script>

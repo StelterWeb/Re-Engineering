@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <head> 
+        @[Mandatory]
+        <!-- Set the libraries in the template (mandatory)-->
+        <!-- Start "@"[JourneyCode] (CSS Section) -->
+        @[JourneyCSS]
+        <!-- End "@"[JourneyCode] (CSS Section) -->
+        <!-- Start "@"[gilibs](CSS Section) -->
+        @[GICSS]
+        <!-- End "@"[gilibs] (CSS Section) -->
+        @[FontAwesome]
+    </head>
+
+    <body>
+       
+        <!-- Start "@"[jQuery]-->
+            @[jQuery]
+            <!-- End "@"[jQuery]-->
+            @[magnific-js] 
+            @[ClientJS]
+            <!-- Start gilibs "@"[gilibs] -->
+            @[GIJS]
+            <!-- End gilibs -->
+            <!-- Start "@"[AdditionalHeadHTML]-->
+            <!-- Start ebrochure -->
+            @[eBrochureGlobal]
+            <!-- End ebrochure -->
+            @[ReCaptcha]
+            <!-- End "@"[AdditionalHeadHTML]-->
+            <!-- Start "@"[JourneyCode] (JS section) -->
+            @[JourneyJS]
+            <!-- End "@"[JourneyCode] (JS section) -->
+            <!-- Start "@"[s_codejs] -->
+            @[s_codejs]
+            <!-- End "@"[s_codejs] -->
+            <!-- Custom JS Code and Code Initialization -->
+            <script>
+                jQuery(document).ready(function ($) {
+                    
+                });
+            </script>
+            @[site-catalyst]
+            <!-- set the site catalyst code (mandatory)-->
+    </body>
+
+</html>
