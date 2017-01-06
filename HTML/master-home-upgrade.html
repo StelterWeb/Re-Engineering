@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+    <head>
+        @[base]
+        @[metaTags] 
+        @[SEO] 
+        @[title] 
+        @[magnific-css]
+		@[orgId-js]
+		@[ServerIs]
+		<!-- Set the libraries in the template (mandatory)-->
+
+		@[ClientCSS] 
+
+        <!-- Start "@"[JourneyCode] (CSS Section) -->
+        <link href="prebuilt/css/stelter-journey.css" rel="stylesheet"> 
+        <!-- End "@"[JourneyCode] (CSS Section) -->
+
+        <!-- Start "@"[gilibs](CSS Section) -->
+            <link rel="stylesheet" href="//web.giftillustrator.com/Calculator/Production/css/jquery.fancybox-1.3.4.css" media="screen" />
+            <link rel="stylesheet" href="//web.giftillustrator.com/Calculator/Production/css/custom.fancybox.css" media="screen" />
+        <!-- End "@"[gilibs] (CSS Section) -->
+
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700" rel="stylesheet" type="text/css">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    </head>
+    <body>
+        <div id="wrapper" class="stl-clearfix container">
+            <div class="stl-header">@[TextHeader]</div>
+            <div id="main" class="content-layout default-content-layout">
+                <div id="content" role="main" class="default-content">
+                    <div id="stl-cms" class="mainCol stl-clearfix">
+                        <div class="main-copy stl-clearfix" id="stl-page-copy-container">
+                            <h1 class="stl-page-title">
+                                @[PageTitle]
+                            </h1>
+                                @[PageCopy]
+                        </div>                                                      
+                    </div>
+                </div>
+            </div>
+            <div id="stl-copyright-container" class="stl-copyright stl-clearfix">@[Copyright]</div>
+            <footer class="stl-footer">@[TextFooter]</footer>
+        </div>
+
+
+        <!-- Start "@"[jQuery]-->
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+        <!-- End "@"[jQuery]-->
+
+        @[magnific-js]
+        @[ClientJS] 
+
+        <!-- Start gilibs "@"[gilibs] -->
+        <script src="//web.giftillustrator.com/Calculator/Production/scripts/jquery.fancybox-1.3.4.pack.js"></script>
+        
+        
+        
+        <!-- End gilibs -->
+
+        <!-- Start "@"[AdditionalHeadHTML]-->
+            <!-- Start ebrochure -->
+                <script>
+                // eBrochure Global
+                jQuery(document).ready(function($) {
+                    // hide copyright information for all ebrochures except X68 and X70
+                    if ($("body.ebrochure-page").length > 0) {
+                        var path = "ebr=x68";
+                        var path2 = "ebr=x70";
+                        if (!(window.location.search.replace("?", "").match(path) ||
+                                window.location.search.replace("?", "").match(path2))) {
+                            $("body.ebrochure-page .cga-copyright").css("display", "none");
+                        }
+                    }
+                });
+                </script>
+            <!-- End ebrochure -->
+        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+        <script type="text/javascript">
+            var captchaWidgetForPEPC;
+            var captchaWidgetForEbro;
+            var captchaWidgetForDCGA;
+            var onloadCallback = function () {
+                if (document.getElementById('pepcReCaptcha')) {
+                    captchaWidgetForPEPC = grecaptcha.render('pepcReCaptcha', {
+                        'sitekey': ''
+                    });
+                }
+                if (document.getElementById('ebroReCaptcha')) {
+                    captchaWidgetForEbro = grecaptcha.render('ebroReCaptcha', {
+                        'sitekey': ''
+                    });
+                }
+                if (document.getElementById('dcgaReCaptcha')) {
+                    captchaWidgetForDCGA = grecaptcha.render('dcgaReCaptcha', {
+                        'sitekey': ''
+                    });
+                }
+            };
+        </script>
+        <!-- End "@"[AdditionalHeadHTML]-->
+        
+        <!-- Start "@"[JourneyCode] (JS section) -->
+        <script type="text/javascript">
+            jQuery(function ($) {
+                // Accordions - Hide all, show on section
+                $('div.stl-accordion div.stl-section').hide();
+                $('div.stl-accordion div.stl-section').eq(0).slideToggle();
+                $('div.stl-accordion h3.stl-toggle').eq(0).addClass('stl-open');
+                $('div.stl-accordion .stl-toggle').click(function () {
+                    if ($(this).next().is(':visible')) {
+                        $(this).next('div.stl-section').slideToggle();
+                        $(this).toggleClass('stl-open');
+                    } else {
+                        $('div.stl-accordion div.stl-section').hide()
+                        $('div.stl-accordion .stl-toggle').removeClass('stl-open')
+                        $(this).next('div.stl-section').slideToggle();
+                        $(this).toggleClass('stl-open');
+                    }
+                });
+            });
+        </script>
+        <!-- End "@"[JourneyCode] (JS section) -->
+        <!-- Start "@"[s_codejs] -->
+            <script src="Documents/s/san-francisco-symphony/r1/js/s_code.js"></script>
+        <!-- End "@"[s_codejs] -->
+        
+
+        <!-- Custom JS Code -->
+        <script>
+           
+        </script>
+
+        @[site-catalyst]
+        <!-- set the site catalyst code (mandatory)-->
+    </body>
+</html>
